@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scemd>
+	<fan_config period="20" threshold="6" type="DUAL_MODE_HIGH" hibernation_speed="UNKNOWN">
+		<temperature fan_speed="LOW" action="NONE">0</temperature>
+		<temperature fan_speed="MIDDLE" action="NONE">30</temperature>
+		<temperature fan_speed="HIGH" action="NONE">40</temperature>
+		<temperature fan_speed="ULTRA_HIGH" action="NONE">50</temperature>
+		<temperature fan_speed="FULL" action="SHUTDOWN">65</temperature>
+	</fan_config>	
+	<fan_config period="20" threshold="6" type="DUAL_MODE_LOW" hibernation_speed="UNKNOWN">	
+		<temperature fan_speed="LOW" action="NONE">0</temperature>
+		<temperature fan_speed="MIDDLE" action="NONE">30</temperature>
+		<temperature fan_speed="HIGH" action="NONE">40</temperature>
+		<temperature fan_speed="VERY_HIGH" action="NONE">50</temperature>
+		<temperature fan_speed="FULL" action="SHUTDOWN">65</temperature>
+	</fan_config>	
+</scemd>
