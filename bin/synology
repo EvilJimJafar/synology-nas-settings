@@ -1,25 +1,28 @@
 #!/usr/bin/env bash
 
+NAS_IP="10.0.1.11"
+NAS_USER="root"
+
 BIN_NAME=$(basename "$0")
 COMMAND_NAME=$1
 SUB_COMMAND_NAME=$2
-ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../synologyroot/" && pwd )"
 
 sub_help () {
     echo "Usage: $BIN_NAME <command>"
     echo
     echo "Commands:"
     echo "   help               This help message"
-    echo "   upload fan         Uploads fan settings to 10.0.1.11"
-    echo "   upload profile     Uploads the root shell .profile to 10.0.1.11"
+    echo "   upload fan         Uploads fan settings to $NAS_USER@$NAS_IP"
+    echo "   upload profile     Uploads the root shell .profile to $NAS_USER@$NAS_IP"
 }
 
 sub_upload () {
     if [ $SUB_COMMAND_NAME = "fan" ]; then
-        scp "$ROOT_DIR/usr/syno/etc/scemd.xml" root@10.0.1.11:/usr/syno/etc/
-        scp "$ROOT_DIR/usr/syno/etc.defaults/scemd.xml" root@10.0.1.11:/usr/syno/etc.defaults/
+        scp "$ROOT_DIR/usr/syno/etc/scemd.xml" "root@$NAS_IP:/usr/syno/etc/"
+        scp "$ROOT_DIR/usr/syno/etc.defaults/scemd.xml" "$NAS_USER@$NAS_IP:/usr/syno/etc.defaults/"
     elif [ $SUB_COMMAND_NAME = "profile" ]; then
-        scp "$ROOT_DIR/root/.profile" root@10.0.1.11:/root/
+        scp "$ROOT_DIR/root/.profile" "$NAS_USER@$NAS_IP:/root/"
     else
         echo "'$SUB_COMMAND_NAME' is not a thing I know how to upload." >&2
     fi
