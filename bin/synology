@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 NAS_IP="10.0.1.11"
-NAS_USER="root"
+NAS_USER="jim"
 
 BIN_NAME=$(basename "$0")
 COMMAND_NAME=$1
@@ -14,15 +14,14 @@ sub_help () {
     echo "Commands:"
     echo "   help               This help message"
     echo "   upload fan         Uploads fan settings to $NAS_USER@$NAS_IP"
-    echo "   upload profile     Uploads the root shell .profile to $NAS_USER@$NAS_IP"
+    echo "   upload profile     Uploads the ash shell .profile to $NAS_USER@$NAS_IP"
 }
 
 sub_upload () {
     if [ $SUB_COMMAND_NAME = "fan" ]; then
-        scp "$ROOT_DIR/usr/syno/etc/scemd.xml" "root@$NAS_IP:/usr/syno/etc/"
-        scp "$ROOT_DIR/usr/syno/etc.defaults/scemd.xml" "$NAS_USER@$NAS_IP:/usr/syno/etc.defaults/"
+        scp "$ROOT_DIR/usr/syno/etc.defaults/scemd.xml" "$NAS_USER@$NAS_IP:~" && ssh -t "$NAS_USER@$NAS_IP" "sudo mv ./scemd.xml /usr/syno/etc.defaults"
     elif [ $SUB_COMMAND_NAME = "profile" ]; then
-        scp "$ROOT_DIR/root/.profile" "$NAS_USER@$NAS_IP:/root/"
+        scp "$ROOT_DIR/volume1/$NAS_USER/.profile" "$NAS_USER@$NAS_IP:~"
     else
         echo "'$SUB_COMMAND_NAME' is not a thing I know how to upload." >&2
     fi

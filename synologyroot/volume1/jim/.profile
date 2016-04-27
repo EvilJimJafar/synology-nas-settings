@@ -25,6 +25,15 @@ PS1="`hostname`> "
 alias dir="ls -al"
 alias ll="ls -la"
 
-# Media Indexing
+alias jim="cd /volume1/jim"
+alias git="cd /volume1/git"
+alias tv="cd /volume1/tv"
+alias downloads="cd /volume1/downloads"
+alias svn="cd /volume1/svn"
+alias work="cd /volume1/jim/work_archive"
+alias web="cd /volume1/web"
 
+alias forcereboot="echo -n "CCCC" > /dev/ttyS1"
+
+# Media Indexing
 alias mediaIndexDownloads="/usr/syno/bin/synoindex -R /volume1/downloads/"

@@ -165,6 +165,34 @@
 		<disk_temperature fan_speed="FULL"   action="SHUTDOWN">61</disk_temperature>
 	</fan_config>
 
+	<fan_config hw_version="Synology-RX1217" period="300" threshold="2" type="DUAL_MODE_HIGH_EBOX" hibernation_speed="LOW">
+		<disk_temperature fan_speed="LOW" action="NONE">0</disk_temperature>
+		<disk_temperature fan_speed="MIDDLE" action="NONE">45</disk_temperature>
+		<disk_temperature fan_speed="FULL"   action="NONE">52</disk_temperature>
+		<disk_temperature fan_speed="FULL"   action="SHUTDOWN">61</disk_temperature>
+	</fan_config>
+
+	<fan_config hw_version="Synology-RX1217" period="300" threshold="2" type="DUAL_MODE_LOW_EBOX" hibernation_speed="LOW">
+		<disk_temperature fan_speed="LOW" action="NONE">0</disk_temperature>
+		<disk_temperature fan_speed="MIDDLE" action="NONE">45</disk_temperature>
+		<disk_temperature fan_speed="FULL"   action="NONE">52</disk_temperature>
+		<disk_temperature fan_speed="FULL"   action="SHUTDOWN">61</disk_temperature>
+	</fan_config>
+
+	<fan_config hw_version="Synology-RX1217rp" period="300" threshold="2" type="DUAL_MODE_HIGH_EBOX" hibernation_speed="LOW">
+		<disk_temperature fan_speed="LOW" action="NONE">0</disk_temperature>
+		<disk_temperature fan_speed="MIDDLE" action="NONE">45</disk_temperature>
+		<disk_temperature fan_speed="FULL"   action="NONE">52</disk_temperature>
+		<disk_temperature fan_speed="FULL"   action="SHUTDOWN">61</disk_temperature>
+	</fan_config>
+
+	<fan_config hw_version="Synology-RX1217rp" period="300" threshold="2" type="DUAL_MODE_LOW_EBOX" hibernation_speed="LOW">
+		<disk_temperature fan_speed="LOW" action="NONE">0</disk_temperature>
+		<disk_temperature fan_speed="MIDDLE" action="NONE">45</disk_temperature>
+		<disk_temperature fan_speed="FULL"   action="NONE">52</disk_temperature>
+		<disk_temperature fan_speed="FULL"   action="SHUTDOWN">61</disk_temperature>
+	</fan_config>
+
 	<fan_config hw_version="Synology-RX415" period="20" threshold="6" type="DUAL_MODE_HIGH_EBOX" hibernation_speed="LOW">
 		<disk_temperature fan_speed="LOW" action="NONE">0</disk_temperature>
 		<disk_temperature fan_speed="MIDDLE"   action="NONE">48</disk_temperature>
@@ -242,32 +270,32 @@
 	</fan_config>
 	<disk_control>
 		<disk model="ALL">APM_255</disk>
-		<disk model="WD30EZRX">WCACHE_OFF</disk>
-		<disk model="WD25EZRX">WCACHE_OFF</disk>
-		<disk model="WD20EARX">WCACHE_OFF</disk>
-		<disk model="WD15EARX">WCACHE_OFF</disk>
-		<disk model="WD10EADX">WCACHE_OFF</disk>
-		<disk model="WD7500AARX">WCACHE_OFF</disk>
-		<disk model="WD30EZRSDTL">WCACHE_OFF</disk>
-		<disk model="WD25EZRSDTL">WCACHE_OFF</disk>
-		<disk model="WD20EARS">WCACHE_OFF</disk>
-		<disk model="WD15EARS">WCACHE_OFF</disk>
-		<disk model="WD10EARS">WCACHE_OFF</disk>
-		<disk model="WD8000AARS">WCACHE_OFF</disk>
-		<disk model="WD7500AARS">WCACHE_OFF</disk>
-		<disk model="WD6400AARS">WCACHE_OFF</disk>
-		<disk model="WD20EADS">WCACHE_OFF</disk>
-		<disk model="WD15EADS">WCACHE_OFF</disk>
-		<disk model="WD10EADS">WCACHE_OFF</disk>
-		<disk model="WD8088AADS">WCACHE_OFF</disk>
-		<disk model="WD7500AADS">WCACHE_OFF</disk>
-		<disk model="WD6400AADS">WCACHE_OFF</disk>
-		<disk model="WD5000AADS">WCACHE_OFF</disk>
-		<disk model="WD3200AACS">WCACHE_OFF</disk>
-		<disk model="ST32000542AS">WCACHE_OFF</disk>
-		<disk model="ST31500541AS">WCACHE_OFF</disk>
-		<disk model="ST31000520AS">WCACHE_OFF</disk>
-		<disk model="ST3500412AS">WCACHE_OFF</disk>
+		<disk model="WD30EZRX">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD25EZRX">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD20EARX">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD15EARX">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD10EADX">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD7500AARX">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD30EZRSDTL">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD25EZRSDTL">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD20EARS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD15EARS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD10EARS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD8000AARS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD7500AARS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD6400AARS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD20EADS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD15EADS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD10EADS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD8088AADS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD7500AADS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD6400AADS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD5000AADS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="WD3200AACS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="ST32000542AS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="ST31500541AS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="ST31000520AS">DSLEEP_WCACHE_OFF</disk>
+		<disk model="ST3500412AS">DSLEEP_WCACHE_OFF</disk>
 		<disk model="WD20EVDS" eunit="RX1214">DSLEEP_OFF</disk>
 		<disk model="WD5000AAKX" eunit="ALL">NCQ_OFF</disk>
 		<disk model="MK1002TSKB">NCQ_OFF</disk>
@@ -289,11 +317,13 @@
 		<disk model="ST1000DM003" eunit="DX1215">NCQ_OFF</disk>
 		<disk model="ST3000DM001" eunit="DX1215">NCQ_OFF</disk>
 		<disk model="WD60EFRX">NCQ_OFF</disk>
+		<disk model="WD50EFRX">NCQ_OFF</disk>
 		<disk model="ST6000VN0001">TIMEOUT_23</disk>
 		<disk model="ST6000NM0024">TIMEOUT_23</disk>
 		<disk model="ST6000NM0004">TIMEOUT_23</disk>
-		<disk model="ST8000NE0001">TIMEOUT_23</disk>
 		<disk model="ST6000VX0001">TIMEOUT_23</disk>
+		<disk model="ST8000NE0001">TIMEOUT_23</disk>
+		<disk model="ST8000VN0002">TIMEOUT_23</disk>
 		<disk model="MG04ACA50DE">TIMEOUT_23</disk>
 		<disk model="MD03ACA400V">TIMEOUT_23</disk>
 		<disk model="MG04ACA200A">TIMEOUT_23</disk>
@@ -303,10 +333,20 @@
 		<disk model="HUS726060ALA640">TIMEOUT_15</disk>
 		<disk model="HUS724040ALA640">TIMEOUT_15</disk>
 		<disk model="HUH728080ALE600">TIMEOUT_15</disk>
+		<disk model="HDN724040ALE640">TIMEOUT_15</disk>
+		<disk model="HUS724040ALE640">TIMEOUT_15</disk>
 		<disk model="WD1002F9YZ">SECERA_OFF</disk>
 		<disk model="WD2000F9YZ">SECERA_OFF</disk>
 		<disk model="WD3000F9YZ">SECERA_OFF</disk>
 		<disk model="WD4000F9YZ">SECERA_OFF</disk>
+		<disk model="HD204UI">WCACHE_OFF</disk>
+		<disk model="WD6001FFWX">WD_IDLE_OFF</disk>
+		<disk model="WD6001FSYZ">WD_IDLE_OFF</disk>
+		<disk model="WD2002FFSX">WD_IDLE_OFF</disk>
+		<disk model="MD04ACA400" eunit="DX513">DSLEEP_OFF</disk>
+		<disk model="MD04ACA400" eunit="DX213">DSLEEP_OFF</disk>
+		<disk model="WD20EFRX" eunit="DX513">DSLEEP_OFF</disk>
+		<disk model="WD20EFRX" eunit="DX213">DSLEEP_OFF</disk>
 	</disk_control>
 
 </scemd>
